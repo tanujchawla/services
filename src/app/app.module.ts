@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { LoggingService } from './logging.service';
+import { AccountsService } from './accounts.service';
 import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
 
@@ -18,7 +20,7 @@ import { NewAccountComponent } from './new-account/new-account.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [AccountsService, LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
